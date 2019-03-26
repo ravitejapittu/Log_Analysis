@@ -45,29 +45,29 @@ This files contains all configuration (Python3, Postgresql,PIP8 etc) setup for o
 
 ### Expected Output
 
-vagrant@vagrant:~$ cd /vagrant/
-vagrant@vagrant:/vagrant$ cd Log_Analysis/
-vagrant@vagrant:/vagrant/Log_Analysis$ python Log_Analysis.py
+vagrant@vagrant:~$ cd /vagrant/<br>
+vagrant@vagrant:/vagrant$ cd Log_Analysis/<br>
+vagrant@vagrant:/vagrant/Log_Analysis$ python Log_Analysis.py<br>
 
- The Results are:
+ The Results are:<br>
 
-1. What are the most popular three articles of all time?
- TOP THREE ARTICLES BY PAGE VIEWS :
-(1) "Candidate is jerk, alleges rival" ==>338647 views
-(2) "Bears love berries, alleges bear" ==>253801 views
-(3) "Bad things gone, say good people" ==>170098 views
+1. What are the most popular three articles of all time?<br>
+ TOP THREE ARTICLES BY PAGE VIEWS :<br>
+(1) "Candidate is jerk, alleges rival" ==>338647 views<br>
+(2) "Bears love berries, alleges bear" ==>253801 views<br>
+(3) "Bad things gone, say good people" ==>170098 views<br>
 
- 2. Who are the most popular article authors of all time?
- TOP THREE AUTHORS BY VIEWS :
-(1) "Ursula La Multa" ==>507594 views
-(2) "Rudolf von Treppenwitz" ==>423457 views
-(3) "Anonymous Contributor" ==>170098 views
+ 2. Who are the most popular article authors of all time?<br>
+ TOP THREE AUTHORS BY VIEWS :<br>
+(1) "Ursula La Multa" ==>507594 views<br>
+(2) "Rudolf von Treppenwitz" ==>423457 views<br>
+(3) "Anonymous Contributor" ==>170098 views<br>
 
- 3. On which days did more than 1% of requests lead to errors
- DAYS WITH MORE THAN 1% ERRORS:
-July, 17, 2016 ==> 2.3% errors
+ 3. On which days did more than 1% of requests lead to errors<br>
+ DAYS WITH MORE THAN 1% ERRORS:<br>
+July, 17, 2016 ==> 2.3% errors<br>
 
-vagrant@vagrant:/vagrant/Log_Analysis$
+vagrant@vagrant:/vagrant/Log_Analysis$<br>
 
 ### Miscellaneous
 
