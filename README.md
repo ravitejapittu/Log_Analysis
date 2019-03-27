@@ -1,6 +1,6 @@
 # Log Analysis Project
 
-### by Ravi Teja Pittu
+### By Ravi Teja Pittu
 
 This is the project from udacity NanoDegree : [Fullstack Web Developer](https://classroom.udacity.com/nanodegrees/nd004/dashboard/overview)
 
@@ -27,9 +27,9 @@ and postgresql
 3. Download vagrant setup files from **[Udacity's Github](https://github.com/udacity/fullstack-nanodegree-vm)**
 This files contains all configuration (Python3, Postgresql,PIP8 etc) setup for our project
 4. Download the [data](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip) from here.
-5. After downloading goto downloads folder and extract the zip file name contains **LOGS_ANALYSIS**
+5. After downloading goto downloads folder and extract the zip file name contains **Log_Analysis**
 6. Keep it there (or) you can move to your own project path
-7. Download this project: [Log_Analysis project](https://github.com/LavanyaMoyya/Log_Analysis)
+7. Download this project: [Log_Analysis project](https://github.com/ravitejapittu/Log_Analysis)
 
 ### Process of executing the project:
 1. Goto Vagrant folder<br>
