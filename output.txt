@@ -23,25 +23,4 @@ vagrant@vagrant:/vagrant/Log_Analysis$
 The shared directory is located at /vagrant
 To access your shared files: cd /vagrant
 Last login: Tue Mar 26 12:24:09 2019 from 10.0.2.2
-vagrant@vagrant:~$ cd /vagrant/
-vagrant@vagrant:/vagrant$ cd Log_Analysis/
-vagrant@vagrant:/vagrant/Log_Analysis$ python Log_Analysis.py
-
- The Results are:
-
-1. What are the most popular three articles of all time?
- TOP THREE ARTICLES BY PAGE VIEWS :
-(1) "Candidate is jerk, alleges rival" ==>338647 views
-(2) "Bears love berries, alleges bear" ==>253801 views
-(3) "Bad things gone, say good people" ==>170098 views
-
- 2. Who are the most popular article authors of all time?
- TOP THREE AUTHORS BY VIEWS :
-(1) "Ursula La Multa" ==>507594 views
-(2) "Rudolf von Treppenwitz" ==>423457 views
-(3) "Anonymous Contributor" ==>170098 views
-
- 3. On which days did more than 1% of requests lead to errors
- DAYS WITH MORE THAN 1% ERRORS:
-July, 17, 2016 ==> 2.3% errors
 vagrant@vagrant:/vagrant/Log_Analysis$
