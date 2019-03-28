@@ -7,11 +7,11 @@ database_name = "news"
 def three_popular_articles(query_1):
     """What are the most popular three articles of all time?"""
 query_1 = """
-    select title,count(*) from log a
-inner join articles b on
-b.slug = substring(a.path, 10)
-group by substring(a.path,10), b.title
-order by count(*) desc limit 3;
+    WITH  rpt as (select articles.title from articles
+    inner join log on log.path like concat('%', articles.slug, '%')
+    where log.status like '%200%' )
+    select title,count(*) total  from rpt group by
+    title order by total desc limit 3;
 """
 
 db = psycopg2.connect('dbname=' + database_name)
@@ -35,11 +35,14 @@ for i in results:
 def most_popular_authors(query_2):
     """ Who are the most popular article authors of all time?"""
 query_2 = """
-        select name, count(*) from authors a inner join
-articles b on (a.id=b.author) inner join log c on
-(b.slug=substring(c.path,10)
-and a.id=b.author)
-group by a.name order by count(*) desc limit 3;
+        WITH rpt as (select name from authors a inner join
+        articles b on (a.id=b.author) inner join log c on
+        (c.path like concat('%', b.slug, '%') and a.id=b.author)
+        where c.status like '%200%')
+        select name, count(*)
+        total from
+        rpt group by
+        name order by total desc limit 3;
     """
 
 """Connect to the Database and Executing the query"""
@@ -49,7 +52,7 @@ c.execute(query_2)
 results = c.fetchall()
 """ Print the Results"""
 print("\n 2. Who are the most popular article authors of all time?")
-print(' TOP THREE AUTHORS BY VIEWS :')
+print("TOP THREE AUTHORS BY VIEWS :")
 count = 1
 for i in results:
     number = '(' + str(count) + ') "'
@@ -63,7 +66,7 @@ for i in results:
 def get_error_percentage(query_3):
     """ On which days did more than 1% of requests lead to errors"""
 query_3 = """
-        SELECT total.day,
+        WITH rpt as (SELECT total.day as date,
           ROUND(((errors.error_requests*1.0) / total.requests), 3) AS Percent
         FROM (
           SELECT time::date "day", count(*) AS Error_Requests
@@ -77,7 +80,9 @@ query_3 = """
           GROUP BY day
           ) AS total
         ON total.day = errors.day
-        WHERE (ROUND(((errors.Error_Requests*1.0) / total.Requests), 3) > 0.01)
+        WHERE (ROUND(((errors.Error_Requests*1.0)
+        / total.Requests), 3) > 0.01))
+        select date::date,percent from rpt
         ORDER BY Percent DESC;
     """
 """Connect to the Database and Executing the query"""
