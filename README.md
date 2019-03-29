@@ -41,7 +41,7 @@ This files contains all configuration (Python3, Postgresql,PIP8 etc) setup for o
     -use '\dt' to see the tables in database<br>
     -use '\dv' to see the views in database<br>
     -use '\q' to quit the database<br>
-6. use command 'python Log_analysis.py' to run the program<br>
+6. use command 'python Log_Analysis.py' to run the program<br>
 
 ### Expected Output
 
